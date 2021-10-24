@@ -14,7 +14,24 @@ class User:
             password: login's password for a new user
         '''
     self.user_name = user_name
-    self.password = password   
+    self.password = password  
+
+  def signIn(self,user_name,password):
+       for user in User:
+           if(user.user_name == user_name and user.password == password):
+               return user
+
+       return None
+
+  def signUp(self,user_name,password):
+        print(user_name)
+        for user in User :
+            if user.user_name==user.user_name :
+                return "username exists"
+        new_user = User(user.user_name, password)
+        User.append(new_user)
+
+        return "User created successfully"+new_user.user_name   
          
   @classmethod
     
