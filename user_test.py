@@ -2,28 +2,36 @@ import unittest
 from user import User
 
 class TestUser(unittest.TestCase):
-   '''
+
+    '''
     This is a test class that defines test cases for the user class behaviours
     '''
-def setUp(self):
-    '''
+
+    def setUp(self):
+        '''
         Set up method to run before each test cases.
         '''
-    self.new_user = User('Juliana','Juliana@123') # create user object
-
-def tearDown(self):
-    '''
+        self.new_user = User('Juliana','Juliana@123')
+    
+    def tearDown(self):
+        '''
         tearDown method that does clean up after each test case has run.
         '''
-    User.user_list=[]  
+        User.users_list=[]
     
-def test_init(self):
+    def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
         self.assertEqual(self.new_user.username,'Juliana')  
-        self.assertEqual(self.new_user.password,'Juliana@123') 
-if __name__ == '__main__':
-    unittest.main()        
+        self.assertEqual(self.new_user.password,'Juliana@123')  
+    
+    def test_save_user(self):
+        '''
+        test_save_user to check if we can save our user object to our users_list
+        '''
+        self.new_user.save_user()
+        self.assertEqual(len(User.users_list),1)
 
-         
+if __name__ == '__main__':
+    unittest.main()  
