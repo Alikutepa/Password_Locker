@@ -7,8 +7,7 @@ An application that helps manage passwords and even generate new passwords.
 ## Set Up Instructions
 * Clone the repo: git clone https://github.com/Alikutepa/Password_Locker.git
 * Switch into the directory: cd Password
-* To run the application: $ python3.9 user.py
-* To run the tests: python3 credential-test.py
+* To run the application: $ python3.9 ./modules.run.py
 
 ## How to use the app
 * After running the python3 user.py create a new user detail by (nu)
