@@ -10,11 +10,8 @@ An application that helps manage passwords and even generate new passwords.
 * To run the application: $ python3.9 ./modules.run.py
 
 ## How to use the app
-* After running the python3 user.py create a new user detail by (nu)
-* Successful creation of the user details takes you to login which you need to execute before you go to the next step.
-* Use (ex) to exit the app
-* Then use (lg) to login into the app after successful login create your credentials using (create) then generate password or use existing password when through with the creation of credentials you can now display your credentials using(display) after successful display you can exist the app.
-
+* After running the python3.9 ./modules.run.py, follow navigation instructions provided.
+ 
 ## Technologies used 
 Python 3.9
 
