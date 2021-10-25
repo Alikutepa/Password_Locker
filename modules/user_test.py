@@ -32,11 +32,7 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user()
         self.assertEqual(len(User.users_list),1)
-
-    def test_signIn(self):
-         '''
-        test_signIn to check if we can sign in 
-        ''' 
+ 
         
     def test_user_exits(self):
         """ method to check if user exists in the users list"""
