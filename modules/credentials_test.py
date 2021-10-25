@@ -13,7 +13,7 @@ class TestCredentials(unittest.TestCase):
         Set up method to run before each test cases.
         '''
 
-        self.new_socials = Credentials('Facebook','Julie_Ali','Juliana@123')
+        self.new_socials = Credentials('Instagram','Julie_Ali','Juliana@123')
 
     def tearDown(self):
         '''
@@ -28,8 +28,8 @@ class TestCredentials(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_socials.account_name,'Facebook')
-        self.assertEqual(self.new_socials.username,'Julie Ali') 
+        self.assertEqual(self.new_socials.account_name,'Instagram')
+        self.assertEqual(self.new_socials.username,'Julie_Ali') 
         self.assertEqual(self.new_socials.password,'Juliana@123')
 
     def test_save_account(self):
@@ -50,11 +50,17 @@ class TestCredentials(unittest.TestCase):
          the account list
          '''
         self.new_socials.save_account() 
-        test_account =  Credentials('Facebook','Julie Alie','Juliana@123')
+        test_account =  Credentials('Instagram','Julie_Alie','Juliana@123')
         test_account.save_account()
         
         self.new_socials.delete_account()
         self.assertEqual(len(Credentials.account_list),1)
+
+    def test_display_accounts(self):
+        '''
+        test method that returns a list of all accounts added
+        '''
+        self.assertEqual(Credentials.display_accounts(),Credentials.account_list)   
     
   
 if __name__ == '__main__':
